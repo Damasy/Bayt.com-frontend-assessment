@@ -3,11 +3,11 @@ import { Widget } from './models/index';
 const widgets: Widget[] = [
   new Widget({
     "type": 2,
-    "datasource": [],
+    "datasource": "https://run.mocky.io/v3/ce284c78-a279-41e6-8e60-29c5994e73f6",
     "priority": 2,
     "order": 3,
-    "size": 12,
-    "width": "center"
+    "position": 12,
+    "width": 1
   }),
   new Widget(
   {
@@ -15,8 +15,8 @@ const widgets: Widget[] = [
     "datasource": [],
     "priority": 5,
     "order": 4,
-    "size": 11,
-    "width": "right"
+    "position": 11,
+    "width": 2
   }),
   new Widget(
   {
@@ -24,8 +24,8 @@ const widgets: Widget[] = [
     "datasource": [],
     "priority": 4,
     "order": 5,
-    "size": 5,
-    "width": "right"
+    "position": 5,
+    "width": 2
   }),
   new Widget(
   {
@@ -33,8 +33,8 @@ const widgets: Widget[] = [
     "datasource": [],
     "priority": 8,
     "order": 4,
-    "size": 12,
-    "width": "center"
+    "position": 12,
+    "width": 3
   }),
   new Widget(
   {
@@ -42,8 +42,11 @@ const widgets: Widget[] = [
     "datasource": [],
     "priority": 10,
     "order": 3,
-    "size": 4,
-    "width": "left"
+    "position": 4,
+    "width": 1
   })
 ];
 
+export {
+  widgets
+}
