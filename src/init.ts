@@ -1,6 +1,49 @@
 import { Widget } from './models/index';
 
 const widgets: Widget[] = [
+  
+  new Widget(
+    {
+      "type": 7,
+      "datasource": [+8765532],
+      "priority": 10,
+      "order": 1,
+      size: {
+        height: 90
+      }
+    }),
+    new Widget(
+    {
+      "type": 7,
+      "datasource": [+23231],
+      "priority": 10,
+      "order": 1,
+      size: {
+        height: 90,
+        gridRow: '2/2'
+      }
+    }),
+    new Widget(
+    {
+      "type": 7,
+      "datasource": [-23232],
+      "priority": 10,
+      "order": 2,
+      size: {
+        height: 90
+      }
+    }),
+    new Widget(
+    {
+      "type": 7,
+      "datasource": [+76778],
+      "priority": 10,
+      "order": 2,
+      size: {
+        height: 90,
+        gridRow: '2/2'
+      }
+    }),
   new Widget({
     "type": 3,
     "datasource": [
@@ -21,9 +64,11 @@ const widgets: Widget[] = [
       data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
     }],
     "priority": 2,
-    "order": 3,
-    "position": 12,
-    "width": 1/3
+    "order": 4,
+    size: {
+      gridRow: 'span 2',
+      gridCol: 'span 2'
+    }
   }),
   new Widget(
   {
@@ -65,9 +110,10 @@ const widgets: Widget[] = [
       }]
     }],
     "priority": 5,
-    "order": 4,
-    "position": 11,
-    "width": 2
+    "order": 3,
+    size: {
+      gridRow: 'span 3'
+    }
   }),
   new Widget(
   {
@@ -80,8 +126,9 @@ const widgets: Widget[] = [
     }],
     "priority": 4,
     "order": 5,
-    "position": 5,
-    "width": 2
+    size: {
+      gridCol: 'span 2'
+    }
   }),
   new Widget(
   {
@@ -123,18 +170,10 @@ const widgets: Widget[] = [
     }],
     "priority": 8,
     "order": 4,
-    "position": 12,
-    "width": 3
+    size: {
+      gridRow: 'span 2'
+    }
   }),
-  new Widget(
-  {
-    "type": 7,
-    "datasource": [8787],
-    "priority": 10,
-    "order": 3,
-    "position": 4,
-    "width": 1
-  })
 ];
 
 export {

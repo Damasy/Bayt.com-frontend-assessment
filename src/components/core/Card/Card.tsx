@@ -7,9 +7,11 @@ export default function Card({widget, children}: any) {
 
   const style = {
     order: widget.order,
-    // gridColumn: `1 / ${widget.width + 1}`
+    height: `${widget.size.height || 450}px`,
+    gridRow: widget.size.gridRow,
+    gridColumn: widget.size.gridCol,
   }
-
+  console.log(style, '??')
   return (
     <div className='card' style={style}>
       <div className='card-title'>
