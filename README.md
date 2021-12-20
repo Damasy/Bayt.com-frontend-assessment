@@ -19,7 +19,8 @@ We want you to build a Javascript plugin/component for a Dynamic Dashboard Build
 
 ### Solution built on 2 main billars.
 1- A calss with interfaces and models to build the Widget model.
-`src/models/index.ts`
+`src/models/index.ts`.
+
 2- A widget factory to build the most final widget object ready for rendering.
 `src/services/Widget-factory.ts`
 
