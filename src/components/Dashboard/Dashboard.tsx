@@ -6,6 +6,7 @@ import Grid from '../core/Grid/Grid';
 import Chart from '../core/Chart';
 import Numeric from '../core/Numeric';
 import { mappedWidgets, handleChartOptions } from '../../services/Widget-factory';
+import { fetchData } from '../../services/Data-fetch';
 
 class Dashboard extends Component {
 
@@ -14,7 +15,18 @@ class Dashboard extends Component {
   }
 
   componentDidMount() {
-    const data = mappedWidgets();
+    const data: any[] = mappedWidgets();
+    data.forEach((widget: Widget, index: number) => {  
+      if(typeof widget.datasource === "string") {
+        debugger
+        fetchData(widget.datasource).then(res => res.json()).then((res: any) => {
+          debugger
+          widget.datasource = res;
+          data.splice(index, 1, widget);
+          this.setState({widgets: data});
+        });
+      }
+    })
     this.setState({widgets: data});
   }
 

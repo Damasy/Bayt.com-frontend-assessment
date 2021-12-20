@@ -1,7 +1,6 @@
 import { widgets } from "../init";
 import { Widget } from "../models";
 import { types } from "../models/enums";
-import { fetchData } from "./Data-fetch";
 
 const handleTitle = (type: types) => {
   const typeEnum = types;
@@ -188,13 +187,6 @@ export const mappedWidgets = () => {
   let data = JSON.parse(JSON.stringify(widgets));
   data = data.sort((a: Widget, b: Widget) => a.priority - b.priority);
   data.map((widget:Widget) => {
-    if(typeof widget.datasource === "string") {
-      fetchData(widget.datasource).then(res => res.json()).then((res: any) => {
-        widget.datasource = res;
-        widget.title = handleTitle(widget.type);
-        return widget
-      });
-    }
     widget.title = handleTitle(widget.type);
     return widget;
   });
